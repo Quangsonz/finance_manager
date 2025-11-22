@@ -671,7 +671,7 @@ Nếu cần bổ sung chi tiết hoặc giải thích thêm về từng file, h�
 
 ---
 
-## 💼 Phù Hợp Cho CV Xin Việc
+
 
 ### ✅ **Điểm Mạnh Kỹ Thuật**
 1. **Full-stack MERN Development**
@@ -713,7 +713,7 @@ Technologies: Node.js, Express, MongoDB, React, JWT, bcryptjs, Axios, TailwindCS
 Security: Authentication, Authorization, Password Hashing, Protected Routes, CORS
 ```
 
-### 🎯 **Câu Hỏi Phỏng Vấn Có Thể Trả Lời**
+
 1. **"Bạn đã implement authentication như thế nào?"**
    - JWT token-based authentication
    - Bcrypt password hashing với 10 salt rounds
