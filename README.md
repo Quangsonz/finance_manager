@@ -402,10 +402,6 @@ User quên password → Nhập email → Server gửi 6-digit code qua email
 
 ---
 
-### 🎤 **Script Trình Bày Khi Phỏng Vấn**
-
-**Câu hỏi: "Bạn implement security như thế nào?"**
-
 > "Trong dự án finance manager, tôi đã áp dụng nhiều layers bảo mật vì đây là app xử lý dữ liệu tài chính nhạy cảm:
 >
 > **Layer 1 - Authentication:** JWT token-based authentication để verify user identity. Token expire sau 7 ngày để cân bằng UX và security.
