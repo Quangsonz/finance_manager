@@ -132,7 +132,6 @@ export const protect = async (req, res, next) => {
 };
 ```
 
-**💡 Giải thích khi phỏng vấn:**
 - **JWT là gì?** Token chứa thông tin user được mã hóa, không cần lưu session trên server (stateless)
 - **Tại sao dùng JWT?** Scalable, dễ implement API cho mobile/web, không tốn bộ nhớ server
 - **Cơ chế hoạt động:** 
@@ -162,7 +161,6 @@ userSchema.methods.comparePassword = async function(enteredPassword) {
 };
 ```
 
-**💡 Giải thích khi phỏng vấn:**
 - **Bcrypt là gì?** Thuật toán one-way hashing (không thể decrypt ngược lại)
 - **Salt là gì?** Chuỗi random thêm vào password trước khi hash → Cùng password sẽ có hash khác nhau
 - **10 rounds là gì?** Số lần lặp thuật toán (càng cao càng an toàn nhưng chậm hơn), 10 rounds = cân bằng tốt
@@ -199,7 +197,6 @@ const userSchema = new mongoose.Schema({
 });
 ```
 
-**💡 Giải thích khi phỏng vấn:**
 - **Validation ở đâu?** Schema level (MongoDB) + Controller level (optional với express-validator)
 - **Tại sao validate email format?** Ngăn spam accounts, đảm bảo có thể gửi email reset password
 - **lowercase: true:** Tránh trùng lặp email (user@gmail.com = USER@gmail.com)
@@ -225,7 +222,6 @@ app.use(cors({
 }));
 ```
 
-**💡 Giải thích khi phỏng vấn:**
 - **CORS là gì?** Cross-Origin Resource Sharing - Cơ chế bảo mật của browser
 - **Tại sao cần?** Mặc định browser chặn request từ domain khác (security feature)
 - **origin: CLIENT_URL:** Chỉ cho phép frontend chính thức gọi API
@@ -269,7 +265,6 @@ api.interceptors.response.use(
 );
 ```
 
-**💡 Giải thích khi phỏng vấn:**
 - **Axios Interceptor là gì?** Middleware cho HTTP requests (chạy trước/sau mỗi request)
 - **Request Interceptor:** Tự động thêm `Authorization: Bearer <token>` vào header → Không cần manually ở mỗi API call
 - **Response Interceptor:** Catch 401 errors → Auto logout + redirect login
@@ -297,7 +292,6 @@ const PrivateRoute = () => {
 };
 ```
 
-**💡 Giải thích khi phỏng vấn:**
 - **React Router v6 pattern:** Dùng `<Outlet />` để render nested routes
 - **isAuthenticated:** Check từ Context (có user + token hay không)
 - **Loading state:** Tránh flash redirect khi app đang check authentication
@@ -335,7 +329,6 @@ export const errorHandler = (err, req, res, next) => {
 };
 ```
 
-**💡 Giải thích khi phỏng vấn:**
 - **Centralized error handling:** Một nơi xử lý tất cả errors → Consistent response format
 - **Generic error messages:** Không expose database structure, code paths
 - **Development vs Production:** Show stack trace trong dev để debug, hide trong production
@@ -366,7 +359,6 @@ userSchema.methods.createPasswordResetToken = function() {
 };
 ```
 
-**💡 Giải thích khi phỏng vấn:**
 - **6-digit token:** Dễ nhập (UX), đủ an toàn với timeout ngắn (10 phút)
 - **Hash token trước khi lưu DB:** Ngay cả token cũng không lưu plain text
 - **10 phút expiration:** Cân bằng UX (đủ thời gian nhập) vs Security (limit brute force)
@@ -658,7 +650,6 @@ Quan_ly_chi_tieu/
 - **utils/exportUtils.js** được dùng ở các page/component để xuất báo cáo.
 - **App.jsx/main.jsx** là điểm khởi động, kết nối router, context, và render layout.
 
-Nếu cần bổ sung chi tiết hoặc giải thích thêm về từng file, hãy yêu cầu cụ thể nhé!
 
 -  Mật khẩu được mã hóa bằng **bcryptjs** (salt rounds: 10)
 -  Xác thực bằng **JWT token** (expires: 7 days)
@@ -699,18 +690,7 @@ Nếu cần bổ sung chi tiết hoặc giải thích thêm về từng file, h�
    - Code organization (MVC)
    - API documentation
 
-### 📝 **Mô Tả Cho CV**
-```
-Personal Finance Manager | Full-stack MERN Application
-- Developed a comprehensive personal finance management web app using MERN stack
-- Implemented JWT-based authentication with bcrypt password hashing (10 salt rounds)
-- Built RESTful API with protected routes using Express middleware
-- Created responsive UI with React 18, Context API, and TailwindCSS
-- Applied security best practices: CORS configuration, input validation, token management
-- Features: Transaction tracking, budget management, recurring transactions, data visualization
 
-Technologies: Node.js, Express, MongoDB, React, JWT, bcryptjs, Axios, TailwindCSS
-Security: Authentication, Authorization, Password Hashing, Protected Routes, CORS
 ```
 
 
